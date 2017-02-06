@@ -1,0 +1,6 @@
+/target/
+/aula-calculadora-core/target/
+/aula-calculadora-jse/target/
+/aula-calculadora-shared/target/
+/aula-calculadora-web/target/
+.DS_Store
