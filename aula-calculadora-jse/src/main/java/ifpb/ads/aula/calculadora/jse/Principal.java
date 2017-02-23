@@ -1,6 +1,7 @@
 package ifpb.ads.aula.calculadora.jse;
 
-import ifpb.ads.aula.calculadora.shared.Calculator;
+import ifpb.ads.aula.calculadora.shared.Carrinho;
+import ifpb.ads.aula.calculadora.shared.Chat;
 
 /**
  * @author Ricardo Job
@@ -16,15 +17,27 @@ public class Principal {
 //        String recurso = "java:global/aula-calculadora-core/CalculatorSimple";
 
         ServiceLocator locator = new ServiceLocator();
-        String recurso = "java:global/aula-calculadora-core/CalculatorSimple!ifpb.ads.aula.calculadora.shared.Calculator";
-//        for (int i = 0; i < 100; i++) {
+//        String recurso = "java:global/aula-calculadora-core/CalculatorSimple!ifpb.ads.aula.calculadora.shared.Calculator";
+//        String recurso = "java:global/aula-calculadora-core/CarrinhoDeCompra";
+        String recurso = "ifpb.ads.aula.calculadora.shared.Chat#ifpb.ads.aula.calculadora.shared.Chat";
 
-//            new Thread(() -> {
-        Calculator calc = locator.lookup(recurso, Calculator.class);
-        System.out.println(calc.nome() + " - ");
+//        Carrinho carrinho = locator.lookup(recurso, Carrinho.class);
+//        carrinho.adicionar("tv");
+//        carrinho.adicionar("lapis");
+//        carrinho.adicionar("caneta");
+//        carrinho.remover("tv");
+//        carrinho.finalizarCarrinho();
+//        carrinho.listarTodos().forEach(System.out::println);
+        
+//        System.out.println(calc.nome() + " - ");
 //            System.out.println(calc.somar(3, i));
 //            }).start();
 //        }
 
+
+        Chat chat = locator.lookup(recurso, Chat.class);
+        chat.historico().forEach(System.out::println);
+        chat.novaMensagem("nova mensagem");
+        chat.historico().forEach(System.out::println);
     }
 }

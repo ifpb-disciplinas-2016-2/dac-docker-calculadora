@@ -1,0 +1,9 @@
+Launching GlassFish on Felix platform
+Registered com.sun.enterprise.glassfish.bootstrap.osgi.EmbeddedOSGiGlassFishRuntime@e13bae6 in service registry.
+
+
+
+#!## LogManagerService.postConstruct : rootFolder=/opt/payara41/glassfish
+#!## LogManagerService.postConstruct : templateDir=/opt/payara41/glassfish/lib/templates
+#!## LogManagerService.postConstruct : src=/opt/payara41/glassfish/lib/templates/logging.properties
+#!## LogManagerService.postConstruct : dest=/opt/payara41/glassfish/domains/domain1/config/logging.properties
